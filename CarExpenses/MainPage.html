@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Expenses</title>
+
+</head>
+
+<body class="themeColor">
+    <div class="header-large"></div>
+    <div class="logInPosition">
+        <div class="navBtnsDef navBtnsLogIn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOG IN</div>
+    </div>
+    <div class="main-nav">
+        <div class="navBtnsDef">FEATURES</div>
+        <div class="navBtnsDef">REPORTS</div>
+        <div class="navBtnsDef">GAS STATIONS</div>
+        <div class="navBtnsDef">DEALERS</div>
+        <div class="navBtnsDef">ABOUT THIS APP</div>
+        <div class="navBtnsInvisible"></div>
+    </div>
+    <div class="contentDiv">
+        <h1>CAR EXPENSES</h1>
+        <h2>Manage Your Vehicle Expenses With Ease.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aperiam, vitae nihil necessitatibus quas ea,
+            voluptatem, consequatur natus blanditiis temporibus ratione laudantium! Sequi accusantium corporis pariatur
+            commodi nam. Amet, rerum.
+        </p>
+    </div>
+
+    <div id="id01" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="../CarExpenses/IMGs/LogInIco1.png" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button class="navBtnsDef" type="submit" style="height: 40px" id="loginBtn">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+    
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw"><a href="#">Create account</a></span>
+          </div>
+        </form>
+    </div>
+
+    <script src="MainCode.js"></script>
+</body>
+
+</html>
