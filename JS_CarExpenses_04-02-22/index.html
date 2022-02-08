@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Car Expenses</title>
+</head>
+
+<body>
+  <!-- Header Img -->
+  <div class="header-img"></div> 
+  <!-- Choose Car Btn -->
+  <div class="nav-btns login-btn" id="btn-login" onclick="showChooseCarForm()" >CHOOSE YOUR CAR <i class="fas fa-car"></i></div> 
+  <!-- Navigation Btns -->
+  <section class="nav-container"> 
+    <span class="nav-btns" id="btn-home" onclick="navBtnClicked(this)">Home<i class="fas fa-home"></i></span>
+    <span class="nav-btns" id="btn-history" onclick="navBtnClicked(this)">History<i class="fas fa-history"></i></span>
+    <span class="nav-btns" id="btn-reports" onclick="navBtnClicked(this)">Reports<i class="fas fa-chart-line"></i></span>
+    <span class="nav-btns" id="btn-reminders" onclick="navBtnClicked(this)">Reminders<i class="far fa-bell"></i></span>
+    <span class="nav-btns" id="btn-refueling" onclick="navBtnClicked(this)">Refueling<i class="fas fa-gas-pump"></i></span>
+    <span class="nav-btns" id="btn-about-us" onclick="navBtnClicked(this)">About us<i class="far fa-address-card"></i></span>
+  </section>
+  <!-- Content -->
+  <section class="content-container">
+    <!-- Home -->
+    <div class="content-home" id="content-home">
+      <h1>CAR EXPENSES</h1>
+      <h2>Manage Your Vehicle Expenses With Ease.</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aperiam, vitae nihil necessitatibus quas ea,
+        voluptatem, consequatur natus blanditiis temporibus ratione laudantium! Sequi accusantium corporis pariatur
+        commodi nam. Amet, rerum.
+      </p>
+    </div>
+    <!-- Refuel  -->
+    <div class="content-refuel" id="content-refuel">
+      <ul class="refuel">
+        <li>
+            <label for="odometer">Odometer:</label>
+            <input type="number" id="odometer" name="fname">
+        </li>
+        <li>
+          <label for="price">Price/L:</label>
+          <input type="text" id="price" name="fname">
+        </li>
+        <li>
+          <label for="cost">Total cost:</label>
+          <input type="text" id="cost" name="fname">
+        </li>
+        <li>
+          <label for="quantity">Liters:</label>
+          <input type="text" id="quantity" name="fname">
+        </li>
+        <li>
+          <label for="station">Gas station:</label>
+          <input type="text" id="station" name="fname">
+        </li>
+        <li class="nav-btns" id="btn-add-refueling" onclick="addRefueling(this)"> ADD </li>
+      </ul>
+    </div>
+  </section>
+  <!-- Choose Car Form -->
+  <form class="choose-car-form" id="choose-car-form">
+    <h1 id="choose-car-title">
+      Select your car 
+      <span class="choose-car-btns delete-btns" onclick="document.getElementById('choose-car-form').style.display='none'">X</span>
+    </h1>
+    <div class="choose-car-btns add-new-car-btn" 
+      onclick="document.getElementById('add-car-form').style.display='flex';
+      document.getElementById('choose-car-form').style.display='none'">
+      Add New
+    </div>
+  </form>
+  <!-- Add New Car Form -->
+  <form class="choose-car-form" id="add-car-form">
+    <h1>
+      Describe your car
+      <span class="choose-car-btns delete-btns" onclick="document.getElementById('add-car-form').style.display='none'">X</span>
+    </h1>
+    <div>
+      <label for="car-name" class="add-car-btns" >Name:</label>
+      <input type="text" id="car-name">
+    </div>
+    <div>
+      <label for="car-description" class="add-car-btns">Description:</label>
+      <input type="text" id="car-description">
+    </div>
+    <div class="choose-car-btns add-new-car-btn" onclick="addCarBtnClicked()">
+      Add New
+    </div>
+  </form>
+  <!-- Option not available yet -->
+  <form class="choose-car-form" id="not-available">
+    <h1>This option is not available yet
+      <span class="choose-car-btns delete-btns" onclick="document.getElementById('not-available').style.display='none'">X</span>
+    </h1>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
